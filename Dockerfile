@@ -40,8 +40,7 @@ RUN yum -y install mariadb-server \
 
 # Add config files and scripts
 ADD ./vhost.conf /etc/httpd/conf.d/default-vhost.conf
-RUN mkdir -p /data/www/html/sites/default
-ADD ./index.php /data/www/html/sites/default/index.php
+ADD ./index.php /var/www/html/index.php
 
 # Configure servicies
 ADD ./start.sh /start.sh
@@ -49,7 +48,7 @@ ADD ./supervisor-httpd.ini /etc/supervisord.d/httpd.ini
 
 RUN chmod 755 /start.sh
 
-VOLUME ["/data/www/html/sites", "/var/log/httpd"]
+VOLUME ["/var/www/html", "/var/log/httpd"]
 
 EXPOSE 80
 
