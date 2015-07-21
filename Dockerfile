@@ -13,6 +13,8 @@ RUN yum -y install mariadb-server \
     tree \
     httpd \
     php \
+    php-bcmath \
+    php-common \
     php-pear \
     php-mysql \
     php-cli \
@@ -21,6 +23,7 @@ RUN yum -y install mariadb-server \
     php-fpm \
     php-pdo \
     php-mbstring \
+    php-mcrypt \
     php-soap \
     php-xml \
     php-xmlrpc \
