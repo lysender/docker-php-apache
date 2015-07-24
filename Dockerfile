@@ -45,6 +45,7 @@ ADD ./index.php /var/www/html/index.php
 # Configure servicies
 ADD ./start.sh /start.sh
 ADD ./supervisor-httpd.ini /etc/supervisord.d/httpd.ini
+ADD ./timezone.ini /etc/php.d/timezone.ini
 
 RUN chmod 755 /start.sh
 
