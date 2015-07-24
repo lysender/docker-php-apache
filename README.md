@@ -2,7 +2,7 @@
 
 Generic PHP Apache docker container built on CentOs 7.
 
-Note: This repo just serves as a base image for building PHP/Apache based containers. You can extend this by using the existing image (the result of this Docker file repo) at https://registry.hub.docker.com/u/lysender/genericphpapache/ by Docker Hub. 
+Note: This repo just serves as a base image for building PHP/Apache based containers. You can extend this by using the existing image (the result of this Docker file repo) at https://registry.hub.docker.com/u/lysender/php-apache/ by Docker Hub. 
 
 ## Requirements
 
@@ -19,10 +19,10 @@ Note: I prefer to create images and containers as a regular user. You may choose
     cd docker-php-apache
     
     # Build image, you can use any tag name
-    docker build --rm -t lysender/genericphpapache .
+    docker build --rm -t lysender/php-apache .
     
     # Create and run a container on poart 8080
-    docker run --name sample-php -d -p 8080:80 lysender/genericphpapache
+    docker run --name sample-php -d -p 8080:80 lysender/php-apache
 
 The first part (building the image) will take some time to complete. Fast connection helps.
 
