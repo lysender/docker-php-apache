@@ -3,7 +3,10 @@ MAINTAINER Leonel Baer <leonel@lysender.com>
 
 # Install Apache  and misc tools
 RUN yum -y install supervisor \ 
-    httpd && yum clean all
+    httpd \
+    make \
+    openssl \
+    mod_ssl && yum clean all
 
 # Add config files and scripts
 ADD ./vhost.conf /etc/httpd/conf.d/default-vhost.conf
